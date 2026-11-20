@@ -1,0 +1,525 @@
+/* Amazing Media Control - GNOME Shell 51 Stylesheet */
+
+.amc-panel-button {
+    -natural-hpadding: 6px;
+    -minimum-hpadding: 4px;
+}
+
+.amc-bottom-bar-pill {
+    background-color: rgba(24, 24, 28, 0.90);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    padding: 4px 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.amc-bottom-bar-pill:hover {
+    background-color: rgba(34, 34, 40, 0.95);
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+.amc-card {
+    spacing: 8px;
+}
+
+.amc-info-box {
+    spacing: 8px;
+}
+
+.amc-app-icon {
+    icon-size: 16px;
+}
+
+.amc-track-label {
+    font-weight: 500;
+}
+
+.amc-controls-box {
+    spacing: 2px;
+}
+
+.amc-control-btn {
+    padding: 3px 5px;
+    border-radius: 999px;
+    background-color: transparent;
+}
+
+.amc-control-btn:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.amc-control-btn:active {
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+.amc-control-btn:insensitive {
+    opacity: 0.35;
+}
+
+/* ---------- Popout Card & Blurred Album-Art Backdrop ---------- */
+
+.amc-card-menu {
+    padding: 0;
+    background-color: #222226;
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.amc-card-menu.amc-glass {
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.popup-menu.popup-menu-boxpointer.amc-dual-boxpointer,
+.popup-menu.amc-dual-boxpointer,
+.popup-menu-boxpointer.amc-dual-boxpointer,
+.amc-dual-boxpointer {
+    -arrow-background-color: transparent;
+    -arrow-border-color: transparent;
+    -arrow-border-width: 0px;
+    -arrow-border-radius: 0px;
+    -arrow-rise: 0px;
+    -arrow-box-shadow: none;
+    -boxpointer-gap: 0px;
+    background-color: transparent;
+    border: none;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-menu.amc-dual-boxpointer .popup-menu-content,
+.popup-menu-boxpointer.amc-dual-boxpointer .popup-menu-content,
+.popup-menu-content.amc-card-menu.amc-dual-menu,
+.amc-card-menu.amc-dual-menu,
+.amc-dual-menu {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    border-width: 0px;
+    border-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.popup-menu-item.amc-card-item,
+.amc-card-item {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-width: 0px;
+    border-radius: 20px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.amc-card-item:hover,
+.amc-card-item:focus,
+.amc-card-item:active,
+.amc-card-item:selected {
+    background-color: transparent;
+}
+
+.amc-popup-root-col {
+    spacing: 2px;
+}
+
+.amc-popup-top-spectrum-box {
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.amc-popup-root-row {
+    spacing: 12px;
+}
+
+.amc-popup-card {
+    color: #ffffff;
+}
+
+.amc-card-standalone,
+.amc-lyrics-card {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background-color: #222226;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.amc-popup-backdrop {
+    border-radius: 19px;
+    background-size: cover;
+    background-position: center;
+}
+
+.amc-popup-sheen {
+    border-radius: 19px;
+}
+
+.amc-glass .amc-popup-sheen {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.08);
+    background-gradient-end: rgba(0, 0, 0, 0.16);
+}
+
+.amc-popup-container {
+    padding: 14px 16px;
+    spacing: 12px;
+}
+
+.amc-popup-header {
+    spacing: 6px;
+    min-height: 28px;
+}
+
+.amc-popup-header-spacer {
+    width: 28px;
+    height: 28px;
+}
+
+.amc-popup-badge-btn {
+    padding: 3px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.amc-popup-badge-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.amc-popup-app-badge {
+    spacing: 6px;
+}
+
+.amc-popup-app-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.amc-popup-switcher {
+    spacing: 4px;
+}
+
+.amc-player-chip {
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.10);
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.amc-player-chip:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.amc-player-chip-active {
+    font-weight: 700;
+}
+
+.amc-popup-track-row {
+    spacing: 14px;
+}
+
+.amc-popup-art-frame {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.42);
+}
+
+.amc-popup-meta-box {
+    spacing: 3px;
+}
+
+.amc-popup-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.amc-popup-artist {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.amc-popup-album {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.52);
+}
+
+.amc-popup-progress-box {
+    spacing: 4px;
+}
+
+.amc-popup-slider,
+.amc-popup-volume-slider {
+    height: 18px;
+    -barlevel-height: 5px;
+    -barlevel-background-color: rgba(255, 255, 255, 0.22);
+    -barlevel-active-background-color: -st-accent-color;
+    -slider-handle-radius: 6px;
+}
+
+.amc-popup-time-row {
+    font-size: 11px;
+    font-feature-settings: "tnum";
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.amc-popup-controls-row {
+    spacing: 8px;
+}
+
+.amc-popup-nav-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.amc-popup-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.amc-popup-nav-btn:active {
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.amc-popup-nav-btn:insensitive {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.amc-popup-play-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    background-color: -st-accent-color;
+    color: -st-accent-fg-color;
+}
+
+.amc-popup-play-btn:hover {
+    opacity: 0.92;
+}
+
+.amc-popup-play-btn:insensitive {
+    opacity: 0.45;
+}
+
+/* Dock / Panel enhancements */
+.amc-logo-btn {
+    padding: 2px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.amc-logo-btn:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.amc-logo-btn:active {
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.amc-bar-cover {
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.amc-scroll-wrap {
+    padding: 0;
+}
+
+/* Popout header, transport & audio controls */
+.amc-popup-mini-btn {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.amc-popup-mini-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+.amc-popup-sub-btn {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 999px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.amc-popup-sub-btn:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
+.amc-popup-sub-btn:active {
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.amc-popup-sub-btn:insensitive {
+    color: rgba(255, 255, 255, 0.32);
+}
+
+/* Audio volume & output switcher */
+.amc-popup-audio-section {
+    spacing: 6px;
+}
+
+.amc-popup-volume-row {
+    spacing: 8px;
+}
+
+.amc-popup-volume-slider {
+    min-width: 90px;
+}
+
+.amc-output-pill-btn {
+    border-radius: 999px;
+    padding: 4px 10px;
+    background-color: rgba(255, 255, 255, 0.10);
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.amc-output-pill-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.amc-output-btn-box {
+    spacing: 6px;
+}
+
+.amc-output-label {
+    max-width: 115px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.amc-output-list {
+    spacing: 3px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.28);
+}
+
+.amc-output-item {
+    padding: 5px 8px;
+    border-radius: 7px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 12px;
+}
+
+.amc-output-item:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.amc-output-item-active {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.amc-output-item-row {
+    spacing: 8px;
+}
+
+/* Additional floating synced lyrics popout card (right side, matching popout height) */
+.amc-lyrics-panel {
+    margin: 0;
+    padding: 14px 16px;
+    spacing: 8px;
+}
+
+.amc-lyrics-header {
+    spacing: 8px;
+}
+
+.amc-lyrics-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.amc-lyrics-sync-btn {
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.10);
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.amc-lyrics-sync-btn:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+    color: #ffffff;
+}
+
+.amc-lyrics-scroll {
+    padding-right: 4px;
+}
+
+.amc-lyrics-inner {
+    spacing: 8px;
+    padding: 6px 4px;
+}
+
+.amc-lyrics-status {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.68);
+    padding: 24px 10px;
+}
+
+.amc-lyrics-line {
+    font-size: 13px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.amc-lyrics-line-btn {
+    padding: 5px 8px;
+    border-radius: 8px;
+    border-left: 3px solid transparent;
+    background-color: transparent;
+}
+
+.amc-lyrics-line-btn:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.amc-lyrics-line-active {
+    padding: 5px 8px;
+    border-radius: 8px;
+    border-left: 3px solid transparent;
+    background-color: rgba(255, 255, 255, 0.20);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.amc-lyrics-line-active .amc-lyrics-line {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.amc-popup-spectrum-box {
+    padding: 4px 6px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.18);
+}

@@ -1,0 +1,12 @@
+{
+  "uuid": "amazing-media-control@local",
+  "name": "Amazing Media Control",
+  "description": "Now Playing card for the GNOME top bar, Dash to Panel, or standalone bottom bar with reactive spectrum, cover-art accent blurred popup, and YouTube browser filter.",
+  "shell-version": [
+    "51"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.amazing-media-control",
+  "gettext-domain": "amazing-media-control",
+  "version": 1
+}
+

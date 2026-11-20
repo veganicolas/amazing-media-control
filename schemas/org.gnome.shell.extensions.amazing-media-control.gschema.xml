@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="amazing-media-control">
+  <schema id="org.gnome.shell.extensions.amazing-media-control"
+          path="/org/gnome/shell/extensions/amazing-media-control/">
+
+    <!-- ================================================================ -->
+    <!-- Dock / Panel                                                     -->
+    <!-- ================================================================ -->
+    <key name="panel-mode" type="s">
+      <default>'panel'</default>
+      <summary>Bar placement mode</summary>
+      <description>Where to place the Now Playing card: 'panel' (Top Bar / Dash to Panel) or 'bottom-bar' (standalone floating bottom pill).</description>
+    </key>
+
+    <key name="panel-box" type="s">
+      <default>'left'</default>
+      <summary>Horizontal bar position</summary>
+      <description>Horizontal box alignment in the bar: 'left', 'center', or 'right'.</description>
+    </key>
+
+    <key name="panel-index" type="i">
+      <default>0</default>
+      <range min="0" max="20"/>
+      <summary>Panel box index</summary>
+      <description>Insertion index inside the selected Main.panel box.</description>
+    </key>
+
+    <key name="bottom-margin" type="i">
+      <default>10</default>
+      <range min="0" max="64"/>
+      <summary>Bottom bar margin</summary>
+      <description>Distance in pixels from the bottom screen edge in standalone bottom-bar mode.</description>
+    </key>
+
+    <key name="bar-font-size" type="i">
+      <default>15</default>
+      <range min="10" max="24"/>
+      <summary>Bar font size</summary>
+      <description>Font size in pixels for the song title and artist label in the bar.</description>
+    </key>
+
+    <key name="bar-max-width" type="i">
+      <default>310</default>
+      <range min="100" max="500"/>
+      <summary>Maximum bar title width</summary>
+      <description>Maximum width in pixels for the track title and artist label in the bar.</description>
+    </key>
+
+    <key name="scrolling-text" type="b">
+      <default>true</default>
+      <summary>Scroll long track titles</summary>
+      <description>Smoothly scroll overflowing song titles horizontally instead of ellipsizing.</description>
+    </key>
+
+    <key name="animate-track-resize" type="b">
+      <default>true</default>
+      <summary>Animate bar width on track change</summary>
+      <description>Smoothly ease the bar card width and fade the track label when switching songs.</description>
+    </key>
+
+    <key name="bar-icon-mode" type="s">
+      <default>'cover-art'</default>
+      <summary>Bar icon display mode</summary>
+      <description>What visual thumbnail to show in the bar card: 'app-logo', 'cover-art', or 'both'.</description>
+    </key>
+
+    <key name="bar-text-format" type="s">
+      <default>'title-artist'</default>
+      <summary>Bar track label format</summary>
+      <description>Formatting of track metadata in the bar: 'title-artist', 'artist-title', or 'title-only'.</description>
+    </key>
+
+    <key name="controls-position" type="s">
+      <default>'hidden'</default>
+      <summary>Inline media controls visibility</summary>
+      <description>Whether inline controls are visible ('right' / 'left') or hidden ('hidden'). Element order is controlled by bar-elements-order.</description>
+    </key>
+
+    <key name="bar-elements-order" type="as">
+      <default>['app-logo', 'title', 'spectrum', 'controls']</default>
+      <summary>Bar element order</summary>
+      <description>Ordered list of elements displayed in the bar card: 'app-logo', 'spectrum', 'title', and 'controls'.</description>
+    </key>
+
+    <key name="controls-only-when-playing" type="b">
+      <default>false</default>
+      <summary>Show inline controls only while playing</summary>
+      <description>Hide inline media control buttons in the bar when playback is paused or stopped.</description>
+    </key>
+
+    <key name="hide-when-paused" type="b">
+      <default>true</default>
+      <summary>Hide widget when paused</summary>
+      <description>Hide the entire widget whenever playback is paused or stopped, even if the media app stays open.</description>
+    </key>
+
+    <key name="hide-when-inactive" type="b">
+      <default>true</default>
+      <summary>Hide widget when no media player is active</summary>
+      <description>Hide the widget when there are no active or eligible MPRIS media players.</description>
+    </key>
+
+    <key name="app-icon-white" type="b">
+      <default>false</default>
+      <summary>White monochrome app logo</summary>
+      <description>Render the playing application icon in monochrome white instead of full color.</description>
+    </key>
+
+    <key name="logo-click-raises" type="b">
+      <default>true</default>
+      <summary>Raise player on logo click</summary>
+      <description>Focus and raise the playing application window when clicking its logo in the bar.</description>
+    </key>
+
+    <key name="toggle-popup-shortcut" type="as">
+      <default>[]</default>
+      <summary>Toggle popout shortcut</summary>
+      <description>Global keyboard shortcut to open or close the Now Playing popout card.</description>
+    </key>
+
+    <!-- ================================================================ -->
+    <!-- Popout                                                           -->
+    <!-- ================================================================ -->
+    <key name="popup-blur" type="b">
+      <default>true</default>
+      <summary>Blurred cover-art popup backdrop</summary>
+      <description>Render a blurred, saturated, darkened cover-art backdrop inside the Now Playing popup.</description>
+    </key>
+
+    <key name="accent-source" type="s">
+      <default>'cover'</default>
+      <summary>Accent color source</summary>
+      <description>Where to derive the accent color: 'cover' (song cover art), 'app-logo' (playing app icon), 'shell' (GNOME Shell accent), or 'white' (default white).</description>
+    </key>
+
+    <key name="popup-width" type="i">
+      <default>380</default>
+      <range min="320" max="520"/>
+      <summary>Popout card width</summary>
+      <description>Width in pixels of the expanded Now Playing popout card.</description>
+    </key>
+
+    <key name="popup-opacity" type="i">
+      <default>100</default>
+      <range min="40" max="100"/>
+      <summary>Popout backdrop opacity</summary>
+      <description>Opacity percentage of the popout card backdrop and glass background.</description>
+    </key>
+
+    <key name="show-shuffle-repeat" type="b">
+      <default>true</default>
+      <summary>Show Shuffle and Repeat controls</summary>
+      <description>Display Shuffle and Repeat buttons in the popout when supported by the MPRIS player.</description>
+    </key>
+
+    <key name="show-seek-buttons" type="b">
+      <default>false</default>
+      <summary>Show -10s / +10s seek buttons</summary>
+      <description>Display quick 10-second backward and forward seek buttons in the popout.</description>
+    </key>
+
+    <key name="show-volume-output" type="b">
+      <default>true</default>
+      <summary>Show volume slider and audio output switcher</summary>
+      <description>Display volume control and audio output device selector inside the popout.</description>
+    </key>
+
+    <key name="show-lyrics" type="b">
+      <default>true</default>
+      <summary>Enable live synced lyrics in popout</summary>
+      <description>Display a collapsible synced lyrics button and panel inside the popout card.</description>
+    </key>
+
+    <key name="show-popup-spectrum" type="b">
+      <default>false</default>
+      <summary>Show spectrum visualizer in popout</summary>
+      <description>Display a wide live audio spectrum graphic inside the expanded Now Playing popout card.</description>
+    </key>
+
+    <key name="popup-spectrum-style" type="s">
+      <default>'center-bars'</default>
+      <summary>Popout spectrum visual style</summary>
+      <description>Visual style used for the wide spectrum visualizer inside the popout card.</description>
+    </key>
+
+    <key name="show-popup-top-spectrum" type="b">
+      <default>true</default>
+      <summary>Show top bars spectrum above popout window</summary>
+      <description>Display a bars-only live audio spectrum sitting along the top edge above the Now Playing popout card.</description>
+    </key>
+
+    <!-- ================================================================ -->
+    <!-- Spectrum                                                         -->
+    <!-- ================================================================ -->
+    <key name="show-spectrum" type="b">
+      <default>true</default>
+      <summary>Show spectrum graphic</summary>
+      <description>Display the audio spectrum graphic next to the app icon.</description>
+    </key>
+
+    <key name="spectrum-style" type="s">
+      <default>'ring'</default>
+      <summary>Spectrum graphic style</summary>
+      <description>Visual style of the bar spectrum: 'bars', 'center-bars', 'wave', 'aurora', 'line', 'soundwave', 'dots', 'mirror', 'segments', 'matrix', 'ribbon', 'ring', 'pulse', or 'history'.</description>
+    </key>
+
+    <key name="spectrum-colors" type="s">
+      <default>'accent'</default>
+      <summary>Spectrum color mode</summary>
+      <description>Color palette for the bar spectrum: 'accent' (follows accent/theme), 'classic' (red peaks), 'level' (green/yellow/red), or 'rainbow'.</description>
+    </key>
+
+    <key name="accent-apply-spectrum" type="b">
+      <default>true</default>
+      <summary>Apply accent color to spectrum graphic</summary>
+      <description>Tint the bar spectrum graphic with the selected accent color.</description>
+    </key>
+
+    <key name="spectrum-columns" type="i">
+      <default>16</default>
+      <range min="4" max="24"/>
+      <summary>Spectrum columns</summary>
+      <description>Number of vertical frequency columns displayed for bar, dot, mirror, and segment styles.</description>
+    </key>
+
+    <key name="spectrum-width" type="i">
+      <default>72</default>
+      <range min="0" max="220"/>
+      <summary>Panel spectrum width (px)</summary>
+      <description>Fixed pixel width for the panel spectrum across all visual styles (0 calculates width automatically from font size and columns).</description>
+    </key>
+
+    <key name="spectrum-range" type="i">
+      <default>32</default>
+      <range min="12" max="48"/>
+      <summary>Spectrum dynamic range (dB)</summary>
+      <description>Effective dB range above the noise floor mapped to full bar height (lower values boost quieter tracks).</description>
+    </key>
+
+    <key name="spectrum-peaks" type="b">
+      <default>false</default>
+      <summary>Show spectrum peak hold markers</summary>
+      <description>Draw falling peak markers above active spectrum columns.</description>
+    </key>
+
+    <key name="spectrum-all-sound" type="b">
+      <default>false</default>
+      <summary>Listen to all system audio</summary>
+      <description>Keep capturing and displaying system audio even when playback is paused or no MPRIS player is active.</description>
+    </key>
+
+    <key name="spectrum-fps" type="i">
+      <default>60</default>
+      <range min="10" max="60"/>
+      <summary>Spectrum frame rate (FPS)</summary>
+      <description>Target redraw rate in frames per second for the live spectrum visualizer.</description>
+    </key>
+
+    <key name="spectrum-invert" type="b">
+      <default>false</default>
+      <summary>Invert spectrum frequency order</summary>
+      <description>Mirror frequencies horizontally so high frequencies appear on the left and bass on the right.</description>
+    </key>
+
+    <key name="spectrum-demo-animation" type="b">
+      <default>false</default>
+      <summary>Simulate animated fallback when silent</summary>
+      <description>Run a smooth simulated fallback animation whenever live audio capture receives silence (useful in VMs without audio passthrough).</description>
+    </key>
+
+    <!-- ================================================================ -->
+    <!-- Sources / Filters                                                -->
+    <!-- ================================================================ -->
+    <key name="hide-all-browsers" type="b">
+      <default>false</default>
+      <summary>Hide all browser players</summary>
+      <description>Ignore all web browser MPRIS sources and show only dedicated desktop media applications.</description>
+    </key>
+
+    <key name="browser-youtube-only" type="b">
+      <default>true</default>
+      <summary>Only show browser playback when playing YouTube</summary>
+      <description>When enabled, browser MPRIS sources are ignored unless the active browser playback comes from YouTube.</description>
+    </key>
+
+    <key name="include-youtube-music" type="b">
+      <default>true</default>
+      <summary>Include YouTube Music in YouTube filter</summary>
+      <description>Treat music.youtube.com tabs as valid YouTube sources when the YouTube-only filter is enabled.</description>
+    </key>
+
+    <key name="ignored-players" type="s">
+      <default>''</default>
+      <summary>Ignored players list</summary>
+      <description>Comma-separated list of player names or MPRIS bus names to ignore completely.</description>
+    </key>
+
+    <key name="priority-players" type="s">
+      <default>''</default>
+      <summary>Priority players list</summary>
+      <description>Comma-separated list of preferred player names or MPRIS bus names prioritized first.</description>
+    </key>
+
+  </schema>
+</schemalist>
